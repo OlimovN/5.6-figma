@@ -1,13 +1,14 @@
-document.getElementById("myForm").addEventListener("submit", function (event) {
-  const inputs = document.querySelectorAll(
-    '#myForm input[type="text"], #myForm input[type="email"], #myForm input[type="tel"]'
-  );
-  const allErr = Array.from(inputs).every(function (input) {
-    return input.value !== "";
-  });
 
-  if (!allErr) {
-    event.preventDefault();
-    document.getElementById("alert").style.display = "block";
-  }
+document.getElementById("myForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const action = {
+    name: input1.value,
+    fam: input2.value,
+    email: input3.value,
+    tel: input4.value,
+    pass: input6.value,
+  };
+
+  console.log(action);
 });
